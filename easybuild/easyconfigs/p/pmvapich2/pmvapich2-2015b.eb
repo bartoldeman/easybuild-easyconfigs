@@ -1,0 +1,22 @@
+easyblock = "Toolchain"
+
+name = 'pmvapich2'
+version = '2015b'
+
+homepage = '(none)'
+description = """PGI C, C++ and Fortran based compiler toolchain,
+ including MVAPICH2 for MPI support."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+compname = 'pgi'
+compver = '15.7-GNU-4.9.3-2.25'
+comp = (compname, compver)
+
+# compiler toolchain dependencies
+dependencies = [
+    comp,
+    ('MVAPICH2', '2.1', '', comp),
+]
+
+moduleclass = 'toolchain'
