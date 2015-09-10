@@ -1,0 +1,19 @@
+easyblock = "Toolchain"
+
+name = 'pompi'
+version = '2015b'
+versionsuffix = '-GNU-4.9.3-2.25'
+
+homepage = 'http://www.pgroup.com/index.htm'
+description = """Toolchain with PGI C, C++ and Fortran compilers, alongside OpenMPI."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+compver = '15.7'
+
+dependencies = [
+    ('pgi', compver, versionsuffix),
+    ('OpenMPI', '1.8.8', '', ('pgi', '%s%s' % (compver, versionsuffix))),
+]
+
+moduleclass = 'toolchain'
